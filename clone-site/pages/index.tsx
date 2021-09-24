@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/Header';
+import Guide from '../components/Guide';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
 
       <main>
         <Header />
+        <Guide />
       </main>
     </div>
   );

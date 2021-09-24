@@ -1,3 +1,4 @@
+import useMedia from 'use-media';
 import {
   HeaderContainer,
   DesktopHeaderMenuContainer,
@@ -37,10 +38,12 @@ const Header = () => {
     '/apple-images/globalnav_bag_image__bmix8075eg4i_large.svg',
   ];
 
+  const isWide = useMedia({ maxWidth: '768px' });
   const [isToggled, setIsToggled] = useState(true);
   const onChangeClick = () => setIsToggled(!isToggled);
   const display = isToggled ? { display: 'none' } : { display: 'flex' };
-  const disappear = !isToggled ? { display: 'none' } : { display: 'flex' };
+  const disappear =
+    !isToggled || !isWide ? { display: 'none' } : { display: 'flex' };
   return (
     <HeaderContainer>
       {/* Desktop */}

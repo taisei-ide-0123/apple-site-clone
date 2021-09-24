@@ -47,14 +47,15 @@ export const MenuBarIconLine = styled.div`
   cursor: pointer;
 `;
 
-export const MobileHeaderMenuContainer = styled(Box)`
-  height: 48px;
-  width: 100%;
-  justify-content: space-between;
-  z-index: 1;
-  padding: 0 16px;
-  @media (min-width: 768px) {
-    display: none;
+export const MobileHeaderMenuContainer = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    height: 48px;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 0 16px;
   }
 `;
 
@@ -71,7 +72,11 @@ export const OpenMobileMenuContainer = styled(Col)`
   background: #1d1d1f;
 `;
 
-export const OpenMobileMenuHeaderContainer = styled(Col)``;
+export const OpenMobileMenuHeaderContainer = styled(Col)`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
 
 export const OpenHeaderTopContainer = styled(Box)`
   align-items: center;
@@ -138,6 +143,7 @@ export const OpenMenuContainer = styled(Box)`
   align-items: flex-start;
   width: 100%;
   background: #1d1d1f;
+  z-index: 100;
 `;
 
 export const OpenMenuWrapper = styled(Col)`
